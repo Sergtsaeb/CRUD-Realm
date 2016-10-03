@@ -96,25 +96,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     }
 
- 
+    // Edit/Delete functionality in progress
     
+/*
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: IndexPath) {
         
-            let bookToBeDeleted = self.datasource[indexPath.row]
+        let bookToBeDeleted = self.datasource[indexPath.row]
         do
         {
             let realm = try Realm()
             try realm.write {
                 realm.delete(bookToBeDeleted)
+                
+                reloadTable()
+                
             }
         }
         catch
         {}
+        
+        let bookToBeEdited = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "Edit") { (editAction, indexPath) -> Void in
+            
+     
+            let bookToBeUpdated = self.datasource[indexPath.row]
+            
+            
+        }
     
-    
-       
     }
+    
+    */
     
     
     
