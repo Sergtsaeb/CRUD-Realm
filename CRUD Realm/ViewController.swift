@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var datasource: Results<BookItem>!
     
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadTable()
@@ -82,7 +81,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selectd row at \(indexPath.row)")
+        print("Selected row at \(indexPath.row)")
     }
     
     
@@ -91,16 +90,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        
-    
-    }
-
-    // Edit/Delete functionality in progress
-    
-/*
-    
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: IndexPath) {
         
         let bookToBeDeleted = self.datasource[indexPath.row]
         do
@@ -115,6 +104,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         catch
         {}
+    
+    }
+
+    // Edit/Delete functionality in progress
+    
+
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) {
+        
         
         let bookToBeEdited = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "Edit") { (editAction, indexPath) -> Void in
             
@@ -125,8 +122,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     
     }
-    
-    */
     
     
     
